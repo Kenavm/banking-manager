@@ -9,9 +9,6 @@ public class Account {
         this.balance = balance;
     }
 
-    public double checkBalance() {
-        return this.getBalance();
-    }
 
     public double getBalance() {
         return balance;
