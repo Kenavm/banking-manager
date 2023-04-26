@@ -10,9 +10,9 @@ public class Application {
     public static void main(String[] args) {
         Account account = new Account("AT732060436165399561", 500.0);
         String accountIban = account.getIban();
-        Transaction withdrawal = getTransactionInformation(accountIban);
-        withdrawal.processTransaction(account, withdrawal);
-        System.out.println(withdrawal);
+        Transaction transaction = getTransactionInformation(accountIban);
+        transaction.processTransaction(account, transaction);
+        System.out.println(transaction);
 
         System.out.println("balance: "+account.checkBalance());
     }
