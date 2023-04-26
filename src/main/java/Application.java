@@ -12,8 +12,8 @@ public class Application {
         String accountIban = account.getIban();
         Transaction transaction = getTransactionInformation(accountIban);
         transaction.processTransaction(account, transaction);
-        System.out.println(transaction);
 
+        System.out.println(transaction);
         System.out.println("balance: "+account.checkBalance());
     }
 
