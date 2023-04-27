@@ -1,9 +1,5 @@
 import banking.Account;
-import banking.Deposition;
 import banking.Transaction;
-import banking.Withdrawal;
-
-import java.util.Scanner;
 
 public class Application {
 

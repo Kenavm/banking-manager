@@ -3,10 +3,12 @@ package banking;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static validation.InputValidator.validateDoubleInput;
+
 public class Account {
     private String iban;
     private double balance;
-
+    private static final int MAX_ID = 1000000000;
     public Account(String iban, double balance) {
         this.iban = iban;
         this.balance = balance;
@@ -42,18 +44,6 @@ public class Account {
         return amount;
     }
 
-    private double validateDoubleInput(String input) {
-        double result = -1.0;
-        try {
-            result = Double.parseDouble(input);
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a valid number.");
-            Scanner s = new Scanner(System.in);
-            result = validateDoubleInput(s.nextLine());
-        }
-        return result;
-    }
-
 
     public boolean isValidAmount(double balance, double amount) {
         if (amount > balance) return false;
@@ -62,11 +52,12 @@ public class Account {
 
     public Transaction createTransaction(String answer, double amount, String iban, String description) {
         Transaction transaction;
-        long id = (int) Math.floor(Math.random() * 1000000000);
+        final long
+        final long  ID = (int) Math.floor(Math.random() * MAX_ID);
         if (answer.equals("withdraw")) {
-            transaction = new Withdrawal(id, amount, iban, description);
+            transaction = new Withdrawal(ID, amount, iban, description);
         } else {
-            transaction = new Deposition(id, amount, iban, description);
+            transaction = new Deposition(ID, amount, iban, description);
         }
 
         return transaction;
