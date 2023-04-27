@@ -1,6 +1,6 @@
 package transactions;
 
-import banking.Account;
+import account.Account;
 
 public abstract class Transaction {
 

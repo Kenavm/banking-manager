@@ -1,4 +1,4 @@
-package banking;
+package account;
 
 import transactions.Deposition;
 import transactions.Transaction;

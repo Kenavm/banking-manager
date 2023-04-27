@@ -1,6 +1,6 @@
 package gui;
 
-import banking.Account;
+import account.Account;
 import transactions.Transaction;
 
 import java.util.Scanner;

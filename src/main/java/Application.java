@@ -1,4 +1,4 @@
-import banking.Account;
+import account.Account;
 import gui.Menu;
 
 public class Application {
