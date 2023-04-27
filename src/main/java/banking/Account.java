@@ -52,8 +52,8 @@ public class Account {
 
     public Transaction createTransaction(String answer, double amount, String iban, String description) {
         Transaction transaction;
-        final long
         final long  ID = (int) Math.floor(Math.random() * MAX_ID);
+
         if (answer.equals("withdraw")) {
             transaction = new Withdrawal(ID, amount, iban, description);
         } else {
