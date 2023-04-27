@@ -6,8 +6,5 @@ public class Withdrawal extends Transaction {
         super(id, amount, recipient, description);
     }
 
-
-
-
 }
 
