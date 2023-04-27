@@ -1,4 +1,6 @@
-package banking;
+package transactions;
+
+import banking.Account;
 
 public abstract class Transaction {
 

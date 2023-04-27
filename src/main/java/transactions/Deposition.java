@@ -1,4 +1,4 @@
-package banking;
+package transactions;
 
 public class Deposition extends Transaction{
 
